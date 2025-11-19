@@ -38,8 +38,6 @@ echo -e "\n¡SonarQube está listo!"
 # --- PASO 4: APROVISIONAMIENTO DEL NUEVO PROYECTO ---
 echo "--- [3/4] Creando el nuevo proyecto en SonarQube... ---"
 echo "Creando el proyecto '$PROJECT_NAME' con la clave '$PROJECT_KEY'..."
-
-# --- !! BLOQUE CORREGIDO !! ---
 # Usamos --data-urlencode para que curl maneje correctamente los espacios
 # y otros caracteres especiales en los nombres de los proyectos.
 curl -s -u admin:$SONAR_ADMIN_PASSWORD -X POST \

@@ -51,8 +51,8 @@ echo "Cambiando la contraseña de 'admin' por defecto..."
 curl -s -u admin:admin -X POST "http://localhost:9000/api/users/change_password?login=admin&previousPassword=admin&password=sonar_admin_password" > /dev/null
 
 # 5b. Crear el proyecto.
-PROJECT_KEY="DevSecOps1"
-PROJECT_NAME="DevSecOps Project 1"
+PROJECT_KEY="Analisis-1"
+PROJECT_NAME="Project 1"
 echo "Creando el proyecto '$PROJECT_NAME' con la clave '$PROJECT_KEY'..."
 curl -s -u admin:sonar_admin_password -X POST "http://localhost:9000/api/projects/create?name=$PROJECT_NAME&project=$PROJECT_KEY" > /dev/null
 

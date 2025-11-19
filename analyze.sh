@@ -16,7 +16,6 @@ if [ ! -d "$ABS_PROJECT_PATH" ]; then
     exit 1
 fi
 
-# --- !! BLOQUE CORREGIDO !! ---
 # Cambiamos la palabra de búsqueda de "running" a "Up", que es lo que 'docker compose ps' muestra.
 if ! docker compose ps | grep -q "sonarqube-server.*Up"; then
     echo "Error: Los servicios de SonarQube no están corriendo. Ejecuta 'docker compose up -d' primero."

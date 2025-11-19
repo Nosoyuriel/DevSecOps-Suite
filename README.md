@@ -54,13 +54,14 @@ Antes de comenzar, asegúrate de cumplir con los siguientes requisitos:
 Este proceso es para la primera vez que se ejecuta la suite.
 
 1.  **Modificar el script `setup.sh`:**
-    *   **Nombre y clave del proyecto:** Edita las siguientes líneas para establecer el nombre y la clave de tu proyecto.Por defecto vendrá “name=Project 1” y “project=Project1”.
+    *   **Nombre y clave del proyecto:** Edita las siguientes líneas para establecer el nombre y la clave de tu proyecto.Por defecto vendrá con la llave del proyecto "Analisis 1” y el Nombre “Project 1”.
         ```bash
-        curl -s -u admin:sonar_admin_password -X POST --data-urlencode "name=Project 1" --data-urlencode "project=Project1" "http://localhost:9000/api/projects/create" > /dev/null
+        PROJECT_KEY="Analisis-1"
+        PROJECT_NAME="Project 1"
         ```
     *   **Contraseña de administrador:** Cambia la contraseña `sonar_admin_password` en la siguiente línea.
         ```bash
-        curl -s -u admin:admin -X POST "http://localhost:9000/api/users/change_password?login=admin&previousPassword=admin&password=sonar_admin_password"
+        curl -s -u admin:admin -X POST "http://localhost:9000/api/users/change_password?login=admin&previousPassword=admin&password=sonar_admin_password" > /dev/null
         ```
 2.  **Guardar el token:** Después de la configuración, asegúrate de guardar el token que se genere para usarlo más adelante.
     ```bash
