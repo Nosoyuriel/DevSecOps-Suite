@@ -12,7 +12,6 @@ services:
       - devsecops-net # Conecta este servicio a nuestra red personalizada
     environment:
       # Credenciales para la base de datos. SonarQube las usará para conectarse.
-      # ¡IMPORTANTE: En un entorno real, usa contraseñas más seguras y gestionadas como secretos!
       - POSTGRES_USER=sonarqube
       - POSTGRES_PASSWORD=sonar_password_change_me
       - POSTGRES_DB=sonarqube
